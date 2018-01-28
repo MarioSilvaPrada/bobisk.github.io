@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* CSS Document */
+@keyframes starpulse {
+	0% { opacity: 1}
+	100% { opacity: 0.2}
+}
+
+@keyframes sunfire{
+	0% { box-shadow: 0 0 50px #f5c91a}
+	100% { box-shadow: 0 0 100px #f5c91a}
+}
+@keyframes spin {
+	0% { transform: rotate(0);}
+	100% { transform: rotate(360deg);}
+}
+
+html, body{
+	width: 100%;
+	height: 100%
+	}
+#universe{
+	background: black;
+	background: radial-gradient(#555,#000);
+	background: -webkit-radial-gradient(#555,#000);
+	background: -moz-radial-gradient(#555,#000);
+	background: -o-radial-gradient(#555,#000);
+}
+#stars{
+	position: relative;
+	z-index: 2;
+	height: 100%;
+	width: 100%;
+	background-image: url(images/stars.png);
+	animation: starpulse 2s infinite alternate;
+}
+#sun{
+	height: 200px;
+	width: 200px;
+	background: orange;
+	background: radial-gradient(#f5c313,#ec7e08);
+	background: -webkit-radial-gradient(#f5c313,#ec7e08);
+	background: -moz-radial-gradient(#f5c313,#ec7e08);
+	background: -o-radial-gradient(#f5c313,#ec7e08);
+	border-radius: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -100px;
+	margin-left: -100px;
+	z-index: 4;
+	box-shadow: 0 0 50px #f5c91a;
+	animation: sunfire 3s infinite alternate;
+}
+#earthorbit{
+	
+	height: 600px;
+	width: 800px;
+	position: absolute;
+	z-index: 4;
+	top: 50%;
+	left: 50%;
+	margin-top: -300px;
+	margin-left: -400px;
+	border-radius: 100%;
+	animation: spin 30s linear infinite;
+}
+#earth{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -40px;
+	animation: spin 10s linear infinite;
+}
+#moonorbit{
+	
+	height: 120px;
+	width: 120px;
+	position: absolute;
+	z-index: 4;
+	top: 50%;
+	left: 0;
+	margin-top: -60px;
+	margin-left: -20px;
+	border-radius: 100%;
+	animation: spin 4s linear infinite reverse;
+}
+#moon{
+	width: 20px;
+	height: 20px;
+	background: grey;
+	background: radial-gradient(#ddd, #888);
+	border-radius: 100%;
+}
